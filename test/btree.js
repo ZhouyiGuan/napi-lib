@@ -1,7 +1,6 @@
-import { 
-    MyBTree,
-} from '../index.js'
+const { MyBTree } = require('../index.js');
  
+
 const TREE_SIZE = 1_000_000;
 const KEY_RANGE = TREE_SIZE * 10;
 const TEST_NUM = 100_000;

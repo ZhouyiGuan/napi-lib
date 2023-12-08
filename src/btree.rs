@@ -76,3 +76,28 @@ impl MyBTree {
         }
     }
 }
+
+#[test]
+fn test_btree_find() {
+    let btree_size = 1_000_000;
+    let key_range = btree_size * 10;
+    let test_num = 100_000;
+
+    let mut btree = MyBTree::new();
+    let mut rng = rand::thread_rng();
+    for _ in 0..btree_size {
+        let random_num = rng.gen_range(0..key_range);
+        btree.map.insert(random_num, random_num);
+    }
+
+    let start = Instant::now();
+    for i in 0..test_num {
+        let random_key = rng.gen_range(0..key_range);
+        let result = btree.find(random_key).unwrap();
+        if i % 1_000 == 0 {
+            println!("Find result for key {}: {}", random_key, result);
+        }
+    }
+    let duration = start.elapsed().as_millis();
+    println!("test time cost {}ms", duration);
+}
