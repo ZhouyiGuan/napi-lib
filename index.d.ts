@@ -10,6 +10,8 @@ export function myDivideWithoutSignal(input1: number, input2: number): Promise<u
 export function myDouble(p: Promise<number>): Promise<number>
 export function myMultithreadsFunc(callback: (err: null | Error, arg1: number, arg2: number) => void): void
 export function myMultithreadsFuncFatal(callback: (arg1: number, arg2: number) => void): void
+export function doubleBuffer(input: Buffer): void
+export function createBuffer(): Buffer
 export class MyBTree {
   constructor()
   static newRandom(size: number): MyBTree
