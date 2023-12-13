@@ -281,8 +281,13 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { MyBTree, sum, log } = nativeBinding
+const { MyBTree, sum, log, myDivide, myDivideWithoutSignal, myDouble, myMultithreadsFunc, myMultithreadsFuncFatal } = nativeBinding
 
 module.exports.MyBTree = MyBTree
 module.exports.sum = sum
 module.exports.log = log
+module.exports.myDivide = myDivide
+module.exports.myDivideWithoutSignal = myDivideWithoutSignal
+module.exports.myDouble = myDouble
+module.exports.myMultithreadsFunc = myMultithreadsFunc
+module.exports.myMultithreadsFuncFatal = myMultithreadsFuncFatal

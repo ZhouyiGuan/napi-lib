@@ -5,6 +5,11 @@
 
 export function sum(a: number, b: number): number
 export function log(n: number): void
+export function myDivide(input1: number, input2: number, signal: AbortSignal): Promise<unknown>
+export function myDivideWithoutSignal(input1: number, input2: number): Promise<unknown>
+export function myDouble(p: Promise<number>): Promise<number>
+export function myMultithreadsFunc(callback: (err: null | Error, arg1: number, arg2: number) => void): void
+export function myMultithreadsFuncFatal(callback: (arg1: number, arg2: number) => void): void
 export class MyBTree {
   constructor()
   static newRandom(size: number): MyBTree
