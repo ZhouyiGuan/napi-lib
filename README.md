@@ -18,3 +18,6 @@ tree find cost: 74.108ms
 $ cargo test test_btree_find -- --nocapture
 ```
 test time cost 259ms
+
+## doc 
+https://bo7zwj4hof.larksuite.com/docx/CfNIdQiuGoKP56xdrHAuihZ0sFd
